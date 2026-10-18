@@ -1,8 +1,7 @@
 export const SITE = {
   name: "Atsumi Piloting Service",
   tagline: "Genshin Impact piloting, run end to end through one Discord bot.",
-  discord: "https://discord.gg/YOUR_INVITE", // TODO
-  botInvite: "https://discord.com/oauth2/authorize?client_id=YOUR_ID&scope=bot+applications.commands", // TODO
+  discord: "https://discord.gg/Jd8srJv96",
 };
 
 export const SERVICES = [
@@ -100,4 +99,4 @@ export const TOP = [
   "50% down before start, 50% before completion. Full payment welcome.",
   "Rush orders: +20%.",
 ];
-export const PAYMENTS = ["PayPal", "GCash", "Remitly", "Bank / SeaBank"];
+export const PAYMENTS = ["PayPal", "GCash", "Wise"];
