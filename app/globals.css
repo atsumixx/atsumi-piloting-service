@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #1b1c22;
+  --hi: #262831;
+  --lo: #111216;
+  --ink: #ebe8ee;
+  --mut: #8f8d97;
+  --acc: #ff5d73;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-mut: var(--mut);
+  --color-acc: var(--acc);
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { background: var(--bg); color: var(--ink); }
+
+@layer components {
+  .neu {
+    background: var(--bg);
+    border-radius: 1.25rem;
+    box-shadow: 8px 8px 18px var(--lo), -8px -8px 18px var(--hi);
+    transition: box-shadow .3s ease, transform .3s ease;
+  }
+  .neu-hover:hover { transform: translateY(-3px); box-shadow: 12px 12px 26px var(--lo), -12px -12px 26px var(--hi); }
+  .neu-in {
+    background: var(--bg);
+    border-radius: .9rem;
+    box-shadow: inset 4px 4px 9px var(--lo), inset -4px -4px 9px var(--hi);
+  }
+  .neu-btn {
+    background: var(--bg);
+    border-radius: .9rem;
+    padding: .7rem 1.4rem;
+    font-weight: 600;
+    box-shadow: 5px 5px 12px var(--lo), -5px -5px 12px var(--hi);
+    transition: all .25s ease;
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  }
+  .neu-btn:hover { color: var(--acc); transform: translateY(-2px); }
+  .neu-btn:active, .neu-btn[data-active="true"] {
+    transform: none; color: var(--acc);
+    box-shadow: inset 4px 4px 9px var(--lo), inset -4px -4px 9px var(--hi);
+  }
+  .field {
+    background: var(--bg);
+    border-radius: .9rem;
+    box-shadow: inset 4px 4px 9px var(--lo), inset -4px -4px 9px var(--hi);
+    @apply w-full px-4 py-3 outline-none placeholder:text-mut transition focus:ring-2 focus:ring-acc/40;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

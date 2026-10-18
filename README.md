@@ -1,26 +1,36 @@
-# Hearth Piloting Agency
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A single-page website for **Hearth Piloting Agency** built with **Bootstrap 5** and **PHP / MySQL** for XAMPP.
+## Getting Started
 
-## Overview
-- **Single-Page Design**: Navigation Bar, Home (Hero with custom Arlecchino banner), Services, Products, About Us, and Contact Us.
-- **Three-Color Palette**: Obsidian Dark (`#140709`), Ember Red (`#c2141f`), and Platinum Silver (`#e9e4e6`).
-- **Genshin Impact Services**:
-  - Exploring Map Account (100% regional completion)
-  - Hunting Primogems (Daily Commissions, Spiral Abyss, Events)
-  - Doing Quests (Archon, World, and Story Quests)
-  - Collecting Materials (Ascension, Talent, and Domain farming)
-- **Products**: Genesis Crystals packages (60, 980, 6,480) and Blessing of the Welkin Moon with PHP pricing.
-- **Contact Us Database**: Submissions are automatically recorded into MySQL (`hearth_piloting` database, `contacts` table).
+First, run the development server:
 
-## Quick Start (XAMPP)
-1. Place this project folder into `C:\xampp\htdocs\hearth-piloting`.
-2. Start **Apache** and **MySQL** in your XAMPP Control Panel.
-3. Open your browser:
-   ```
-   http://localhost/hearth-piloting/
-   ```
-4. Check submitted contact inquiries in **phpMyAdmin**:
-   ```
-   http://localhost/phpmyadmin/ (Database: hearth_piloting -> Table: contacts)
-   ```
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
