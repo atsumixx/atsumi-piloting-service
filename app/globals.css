@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #1b1c22;
-  --hi: #262831;
-  --lo: #111216;
-  --ink: #ebe8ee;
-  --mut: #8f8d97;
+  --bg: #f8f9fc;
+  --hi: #ffffff;
+  --lo: #d8dbe6;
+  --ink: #2d3250;
+  --mut: color-mix(in srgb, #2d3250 62%, #ffffff);
   --acc: #c2272d;
 }
 

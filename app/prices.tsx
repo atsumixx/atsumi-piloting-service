@@ -21,7 +21,7 @@ export default function Prices() {
             <p className="mb-4 text-sm text-mut">{b.sub}</p>
             <ul className="space-y-2 text-sm">
               {b.rows.map(([n, v]) => (
-                <li key={n} className="flex justify-between gap-4 border-b border-white/5 pb-2 last:border-0">
+                <li key={n} className="flex justify-between gap-4 border-b border-ink/10 pb-2 last:border-0">
                   <span className="text-mut">{n}</span>
                   <span className="whitespace-nowrap font-semibold">{v}</span>
                 </li>

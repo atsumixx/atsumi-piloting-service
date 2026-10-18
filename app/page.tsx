@@ -86,7 +86,7 @@ export default function Page() {
                     <div key={k}><dt className="text-xs text-mut">{k}</dt><dd className="font-semibold">{v}</dd></div>
                   ))}
                 </dl>
-                <ul className="mt-4 space-y-1 border-t border-white/5 pt-3 text-xs text-mut">
+                <ul className="mt-4 space-y-1 border-t border-ink/10 pt-3 text-xs text-mut">
                   {PREVIEW.log.map((l) => <li key={l}>• {l}</li>)}
                 </ul>
               </div>
