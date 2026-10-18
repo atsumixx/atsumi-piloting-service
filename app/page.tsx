@@ -1,8 +1,8 @@
-import { PAYMENTS, SERVICES, SITE, STEPS, TOP, TOS } from "./data";
+import { PAYMENTS, PREVIEW, SERVICES, SITE, STEPS, TOP, TOS } from "./data";
 import Prices from "./prices";
 import ContactForm from "./contact-form";
 
-const NAV = ["services", "how", "pricing", "terms", "contact"];
+const NAV = ["services", "bot", "pricing", "terms", "contact"];
 
 function Head({ tag, title }: { tag: string; title: string }) {
   return (
@@ -21,7 +21,7 @@ export default function Page() {
           <a href="#" className="font-extrabold">Atsumi<span className="text-acc"> Piloting</span></a>
           <div className="hidden gap-6 text-sm text-mut sm:flex">
             {NAV.map((n) => (
-              <a key={n} href={`#${n}`} className="capitalize transition hover:text-ink">{n === "how" ? "How it works" : n}</a>
+              <a key={n} href={`#${n}`} className="capitalize transition hover:text-ink">{n === "bot" ? "The bot" : n}</a>
             ))}
           </div>
           <a href={SITE.discord} target="_blank" rel="noopener noreferrer" className="neu-btn !py-2 text-sm">Discord</a>
@@ -39,7 +39,7 @@ export default function Page() {
             <a href="#pricing" className="neu-btn">View prices</a>
           </div>
           <div className="mt-14 grid grid-cols-3 gap-5 text-sm">
-            {[["Hand-played", "no bots, no cheats"], ["Daily proof", "screenshot updates"], ["Bot-managed", "orders via Discord"]].map(([a, b]) => (
+            {[["Hand-played", "no macros, no cheats"], ["Proof updates", "inside your ticket"], ["Bot-run", "order to delivery"]].map(([a, b]) => (
               <div key={a} className="neu-in p-4"><strong className="block">{a}</strong><span className="text-mut">{b}</span></div>
             ))}
           </div>
@@ -57,16 +57,43 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="how">
-          <Head tag="Powered by Atsumi bot" title="How it works" />
-          <div className="grid gap-8 md:grid-cols-3">
-            {STEPS.map((s, i) => (
-              <div key={s.cmd} className="neu neu-hover p-6">
-                <span className="text-sm text-mut">0{i + 1}</span>
-                <code className="neu-in mt-2 block px-3 py-2 font-mono text-acc">{s.cmd}</code>
-                <p className="mt-3 text-sm text-mut">{s.d}</p>
+        <section id="bot">
+          <Head tag="Powered by the Atsumi bot" title="Order in Discord" />
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <ol className="space-y-6">
+              {STEPS.map((s, i) => (
+                <li key={s.cmd} className="neu neu-hover flex items-start gap-4 p-5">
+                  <span className="neu-in grid h-10 w-10 shrink-0 place-items-center text-sm font-bold text-mut">{i + 1}</span>
+                  <div>
+                    <code className="font-mono font-semibold text-acc">{s.cmd}</code>
+                    <p className="mt-1 text-sm text-mut">{s.d}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <div className="neu p-6">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="neu-in grid h-10 w-10 place-items-center font-bold text-acc">A</span>
+                <div>
+                  <p className="text-sm font-bold">Atsumi <span className="rounded bg-acc/20 px-1.5 py-0.5 text-[10px] text-acc">BOT</span></p>
+                  <p className="text-xs text-mut">#ticket-0042</p>
+                </div>
               </div>
-            ))}
+              <div className="neu-in border-l-4 border-acc p-4">
+                <p className="font-bold">{PREVIEW.title}</p>
+                <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
+                  {PREVIEW.rows.map(([k, v]) => (
+                    <div key={k}><dt className="text-xs text-mut">{k}</dt><dd className="font-semibold">{v}</dd></div>
+                  ))}
+                </dl>
+                <ul className="mt-4 space-y-1 border-t border-white/5 pt-3 text-xs text-mut">
+                  {PREVIEW.log.map((l) => <li key={l}>• {l}</li>)}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="mt-10 text-center">
+            <a href={SITE.botInvite} target="_blank" rel="noopener noreferrer" className="neu-btn text-acc">Add the bot to your server</a>
           </div>
         </section>
 
@@ -112,7 +139,7 @@ export default function Page() {
       </main>
 
       <footer className="py-10 text-center text-sm text-mut">
-        © 2026 {SITE.name}
+        © 2026 {SITE.name} · Not affiliated with HoYoverse.
       </footer>
     </>
   );

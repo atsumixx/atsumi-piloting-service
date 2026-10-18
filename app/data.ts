@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Atsumi Piloting Service",
-  tagline: "Hand-played Genshin Impact piloting, ordered through Discord.",
+  tagline: "Genshin Impact piloting, run end to end through one Discord bot.",
   discord: "https://discord.gg/YOUR_INVITE", // TODO
   botInvite: "https://discord.com/oauth2/authorize?client_id=YOUR_ID&scope=bot+applications.commands", // TODO
 };
@@ -12,12 +12,20 @@ export const SERVICES = [
   { t: "Materials", d: "Ascension, talent and weapon material farming." },
 ];
 
-// TODO: replace with your real bot commands
+// TODO: match these to your bot's real slash commands
 export const STEPS = [
-  { cmd: "/prices", d: "Browse rates inside Discord." },
-  { cmd: "/order", d: "Pick a service and open a private ticket." },
-  { cmd: "/status", d: "Check progress and daily proof screenshots." },
+  { cmd: "/prices", d: "Live rates, always in sync with this page." },
+  { cmd: "/order", d: "Choose a service. A private ticket opens for you and your pilot." },
+  { cmd: "/status", d: "Track progress and receive proof screenshots in your ticket." },
+  { cmd: "/pay", d: "Get payment details and confirm your 50% down payment." },
 ];
+
+// Mock of the bot's ticket embed shown on the site. Edit to mirror the real one.
+export const PREVIEW = {
+  title: "Order #0042 · Fontaine Exploration",
+  rows: [["Status", "In progress"], ["Pilot", "Atsumi"], ["Progress", "62%"], ["Payment", "50% paid"]] as [string, string][],
+  log: ["Oculi batch 2 collected", "Waypoints unlocked: 41/66", "Proof screenshot attached"],
+};
 
 type Box = { title: string; sub: string; rows: [string, string][] };
 export const PRICES: { id: string; label: string; boxes: Box[] }[] = [
