@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     body: JSON.stringify({
       embeds: [{
         title: "New commission inquiry",
-        color: 0xff5d73,
+        color: 0xc2272d,
         fields: [
           { name: "Name", value: name.slice(0, 100) },
           { name: "Discord", value: discord.slice(0, 100) },

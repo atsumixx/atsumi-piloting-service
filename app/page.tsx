@@ -16,7 +16,7 @@ function Head({ tag, title }: { tag: string; title: string }) {
 export default function Page() {
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 z-50 border-b-2 border-acc bg-[#23252e]/95 shadow-[0_12px_32px_rgba(0,0,0,.6)] backdrop-blur">
+      <nav className="fixed inset-x-0 top-0 z-50 border-b-2 border-acc bg-[#23252e]/95 shadow-[0_10px_28px_rgba(194,39,45,.22)] backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#" className="font-extrabold">Atsumi<span className="text-acc"> Piloting</span></a>
           <div className="hidden gap-6 text-sm text-mut sm:flex">
@@ -97,7 +97,7 @@ export default function Page() {
         <section id="pricing">
           <Head tag="Rates" title="Pricing" />
           <Prices />
-          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-acc/40 bg-acc/15 p-5 text-sm shadow-[0_0_30px_rgba(255,93,115,.18)]">
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-acc/40 bg-acc/15 p-5 text-sm shadow-[0_0_30px_rgba(194,39,45,.25)]">
             <p><strong>Rush orders:</strong> <span className="text-mut">+20% of total price for priority completion.</span></p>
             <a href="#contact" className="neu-btn !py-2">Book</a>
           </div>

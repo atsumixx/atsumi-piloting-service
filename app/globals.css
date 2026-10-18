@@ -6,7 +6,7 @@
   --lo: #111216;
   --ink: #ebe8ee;
   --mut: #8f8d97;
-  --acc: #ff5d73;
+  --acc: #c2272d;
 }
 
 @theme inline {
@@ -24,6 +24,7 @@ body { background: var(--bg); color: var(--ink); }
   .neu {
     background: var(--bg);
     border-radius: 1.25rem;
+    border: 1px solid rgb(194 39 45 / .12);
     box-shadow: 8px 8px 18px var(--lo), -8px -8px 18px var(--hi);
     transition: box-shadow .3s ease, transform .3s ease;
   }
